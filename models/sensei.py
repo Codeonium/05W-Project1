@@ -1,6 +1,6 @@
 class Sensei:
 
-    def __init__(self, name, level, knowledge, id = None ):
+    def __init__(self, name, level, waza, id = None ):
         self.name = name
-        self.knowledge = knowledge
+        self.waza = waza
         self.id = id
