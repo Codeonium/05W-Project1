@@ -1,0 +1,19 @@
+create models and repositories
+On  console.py remember to import models and repositories
+Save and delete on console.py
+
+
+Templates - Base and index
+
+Static for CSS - leave for last
+
+Repositories - 
+
+Models - Good place to start
+
+DB - run_sql and sql files to be created.
+
+Controllers - 
+
+
+Start by creating the folders and the files that will not change.
