@@ -24,3 +24,22 @@ On Base.html still needs the work done once all parts are decided, check navigat
 DB to take table names after models are created
 
 models created but i think i will revisit them before the end (for now they will work as guidance, but will likely remove/change them)
+
+
+### Dojo
+
+A local dojo has asked you to build a piece of software to help them to manage memberships, and register deshis for keikos.
+
+#### MVP
+
+- The app should allow the dojo to create and edit deshis
+- The app should allow the dojo to create and edit keikos
+- The app should allow the dojo to book deshis on specific keikos
+- The app should show a list of all upcoming keikos
+- The app should show all deshis that are booked in for a particular keiko
+
+#### Possible Extensions
+
+- Keikos could have a maximum capacity, and deshis can only be added while there is space remaining.
+- The dojo could be able to give its members Premium or Standard membership. Standard deshis can only be signed up for keikos during off-peak hours.
+- The Dojo could mark deshis and keikos as active/deactivated. Deactivated deshis/keikos will not appear when creating bookings. 
