@@ -17,3 +17,6 @@ Controllers -
 
 
 Start by creating the folders and the files that will not change.
+
+
+On Base.html still needs the work done once all parts are decided, check navigation
