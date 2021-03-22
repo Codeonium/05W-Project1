@@ -1,6 +1,6 @@
 DROP TABLE IF EXISTS keikos;
 DROP TABLE IF EXISTS senseis;
-DROP TABLE IF EXISTS dechis;
+DROP TABLE IF EXISTS deshis;
 DROP TABLE IF EXISTS wazas;
 
 CREATE TABLE wazas (
@@ -8,7 +8,7 @@ CREATE TABLE wazas (
     name VARCHAR(255)
 );
 
-CREATE TABLE dechis (
+CREATE TABLE deshis (
     id SERIAL PRIMARY KEY,
     name VARCHAR (255),
     level INT,
@@ -26,5 +26,5 @@ CREATE TABLE keikos (
     sensei_id INT REFERENCES senseis(id) ON DELETE CASCADE,
     time TIME,
     space INT,
-    attendance INT REFERENCES dechis(id) ON DELETE CASCADE
+    attendance INT REFERENCES deshis(id) ON DELETE CASCADE
 );

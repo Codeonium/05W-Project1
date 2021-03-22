@@ -1,4 +1,4 @@
-class Dechi:
+class Deshi:
 
     def __init__(self, name, level, knowledge, id = None ):
         self.name = name
