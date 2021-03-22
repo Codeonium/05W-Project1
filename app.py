@@ -17,7 +17,7 @@ app.register_blueprint(wazas_blueprint)
 
 @app.route('/')
 def main():
-    return render_template('index.html')
+    return render_template('index.html', title = "House of Pain")
 
 if __name__ == '__main__':
     app.run()
