@@ -25,6 +25,8 @@ DB to take table names after models are created
 
 models created but i think i will revisit them before the end (for now they will work as guidance, but will likely remove/change them)
 
+need a function for the limit of space in keiko
+
 
 ### Dojo
 

@@ -7,8 +7,8 @@ import repositories.deshi_repository as deshi_repository
 import repositories.sensei_repository as sensei_repository
 
 def save (keiko):
-    sql = "INSERT INTO keikos ( sensei_id, time, space, deshi_id) VALUES (%s, %s, %s, %s) RETURNING id"
-    values = [keiko.sensei.id, keiko.time, keiko.space, keiko.deshi.id]
+    sql = "INSERT INTO keikos ( sensei_id, time) VALUES (%s, %s) RETURNING id"
+    values = [keiko.sensei.id, keiko.time]
     results = run_sql(sql, values)
     id = results[0]['id']
     keiko.id = id

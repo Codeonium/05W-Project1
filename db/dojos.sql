@@ -11,7 +11,7 @@ CREATE TABLE wazas (
 CREATE TABLE deshis (
     id SERIAL PRIMARY KEY,
     name VARCHAR (255),
-    level INT,
+    level VARCHAR (255),
     waza_id INT REFERENCES wazas(id) ON DELETE CASCADE
 );
 
@@ -26,5 +26,5 @@ CREATE TABLE keikos (
     sensei_id INT REFERENCES senseis(id) ON DELETE CASCADE,
     time TIME,
     space INT,
-    attendance INT REFERENCES deshis(id) ON DELETE CASCADE
+    deshi_id INT REFERENCES deshis(id) ON DELETE CASCADE
 );

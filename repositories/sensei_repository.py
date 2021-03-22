@@ -9,8 +9,8 @@ import repositories.waza_repository as waza_repository
 
 
 def save(sensei):
-    sql = "INSERT INTO senseis (name, level, waza_id) VALUES (%s, %s, %s) RETURNING id"
-    values = [sensei.name, sensei.waza.id]
+    sql = "INSERT INTO senseis (name) VALUES (%s) RETURNING id"
+    values = [sensei.name]
     results = run_sql(sql, values)
     id = results[0]['id']
     sensei.id = id
@@ -48,7 +48,7 @@ def delete(id):
 
 
 def update(sensei):
-    sql = "UPDATE senseis SET (name, level, waza_id) = (%s, %s, %s) WHERE id = %s"
+    sql = "UPDATE senseis SET (name, waza_id) = (%s, %s) WHERE id = %s"
     values = [sensei.name, sensei.waza.id, sensei.id]
     run_sql(sql, values)
 
