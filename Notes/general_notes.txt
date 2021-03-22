@@ -20,3 +20,7 @@ Start by creating the folders and the files that will not change.
 
 
 On Base.html still needs the work done once all parts are decided, check navigation
+
+DB to take table names after models are created
+
+models created but i think i will revisit them before the end (for now they will work as guidance, but will likely remove/change them)
