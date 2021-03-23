@@ -1,4 +1,17 @@
 {% extends 'base.html' %}
 {% block content %}
-{{keikos}}
+<h1>Keiko</h1>
+
+<table>
+    <tr>
+        <th>Time</th>
+
+    </tr>
+    {% for keiko in keikos %}
+    <tr>
+        <td><a href="/keikos/{{ keiko.id }}"> {{keiko.time}}</a></td>
+    </tr>
+    {% endfor %}
+</table>
+
 {% endblock %}

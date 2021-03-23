@@ -1,4 +1,17 @@
 {% extends 'base.html' %}
 {% block content %}
-{{wazas}}
+<h1>Waza</h1>
+
+<table>
+    <tr>
+        <th>Name</th>
+
+    </tr>
+    {% for waza in wazas %}
+    <tr>
+        <td><a href="/wazas/{{ waza.id }}"> {{waza.name}} </a></td>
+    </tr>
+    {% endfor %}
+</table>
+
 {% endblock %}

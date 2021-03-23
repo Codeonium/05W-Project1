@@ -1,4 +1,17 @@
 {% extends 'base.html' %}
 {% block content %}
-{{senseis}}
+<h1>Sensei</h1>
+
+<table>
+    <tr>
+        <th>Name</th>
+
+    </tr>
+    {% for sensei in senseis %}
+    <tr>
+        <td><a href="/senseis/{{ sensei.id }}"> {{sensei.name}} </a></td>
+    </tr>
+    {% endfor %}
+</table>
+
 {% endblock %}

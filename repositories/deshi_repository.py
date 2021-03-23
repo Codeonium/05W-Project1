@@ -18,9 +18,9 @@ def select_all():
     deshis = []
     sql = "SELECT * FROM deshis"
     results = run_sql(sql)
-    for result in results:
-        waza = waza_repository.select(result["waza_id"])
-        deshi = Deshi(result["name"], result["level"], waza, result["id"])
+    for row in results:
+        waza = waza_repository.select(row["id"])
+        deshi = Deshi(row["name"], row["level"], waza, row["id"])
         deshis.append(deshi)
     return deshis
 
@@ -29,7 +29,7 @@ def select(id):
     sql = "SELECT * FROM deshis WHERE id = %s"
     values = [id]
     result = run_sql(sql, values)[0]
-    waza = waza_repository.select(result["waza_id"])
+    waza = waza_repository.select(result["id"])
     deshi = Deshi(result["name"], result["level"], waza, result["id"])
     return deshi
 
@@ -56,7 +56,7 @@ def select_waza_learned(id):
     sql = "SELECT wazas.* FROM wazas INNER JOIN keikos ON keikos.waza_id = wazas.id WHERE keikos.waza_id = %s"
     values = [id]
     results = run_sql(sql, values)
-    for result in results:
-        waza = Waza(result["name"])
+    for row in results:
+        waza = Waza(row["name"])
         wazas.append(waza)
     return wazas

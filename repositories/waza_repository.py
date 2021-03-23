@@ -38,12 +38,12 @@ def select(id):
 
 
 def delete_all():
-    sql = "DELETE  FROM wazas"
+    sql = "DELETE FROM wazas"
     run_sql(sql)
 
 
 def delete(id):
-    sql = "DELETE  FROM wazas WHERE id = %s"
+    sql = "DELETE FROM wazas WHERE id = %s"
     values = [id]
     run_sql(sql, values)
 

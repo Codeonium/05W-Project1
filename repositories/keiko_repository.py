@@ -19,8 +19,8 @@ def select_all():
     sql = "SELECT * FROM keikos"
     results = run_sql(sql)
     for result in results:
-        deshi = deshi_repository.select(result["deshi_id"])
-        sensei = sensei_repository.select(result["sensei_id"])
+        deshi = deshi_repository.select(result["id"])
+        sensei = sensei_repository.select(result["id"])
         keiko = Keiko(sensei, result["time"], result["space"], deshi, result["id"])
         keikos.append(keiko)
     return keikos

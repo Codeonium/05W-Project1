@@ -21,7 +21,7 @@ def select_all():
     sql = "SELECT * FROM senseis"
     results = run_sql(sql)
     for result in results:
-        waza = waza_repository.select(result["waza_id"])
+        waza = waza_repository.select(result["id"])
         sensei = Sensei(result["name"], waza, result["id"])
         senseis.append(sensei)
     return senseis
@@ -31,7 +31,7 @@ def select(id):
     sql = "SELECT * FROM senseis WHERE id = %s"
     values = [id]
     result = run_sql(sql, values)[0]
-    waza = waza_repository.select(result["waza_id"])
+    waza = waza_repository.select(result["id"])
     sensei = Sensei(result["name"], waza, result["id"])
     return sensei
 

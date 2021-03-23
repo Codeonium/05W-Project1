@@ -1,4 +1,17 @@
 {% extends 'base.html' %}
 {% block content %}
-{{deshis}}
+<h1>Deshi</h1>
+
+<table>
+    <tr>
+        <th>Name</th>
+
+    </tr>
+    {% for deshi in deshis %}
+    <tr>
+        <td><a href="/deshis/{{ deshi.id }}"> {{deshi.name}} </a></td>
+    </tr>
+    {% endfor %}
+</table>
+
 {% endblock %}

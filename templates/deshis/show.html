@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1> {{deshi.name}} </h1>
+
+<h3>Info:</h3>
+{{deshi.level}}
+<ul>
+    {% for waza in wazas  %}
+    <li>{{waza.name}}</li>
+    {% endfor %}
+
+</ul>
+
+{% endblock %}

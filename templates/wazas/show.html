@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1> {{waza.name}} </h1>
+
+<h3>Knows:</h3>
+
+<ul>
+    {% for deshi in deshis  %}
+    <li>{{deshi.name}}</li>
+    {% endfor %}
+    
+    {% for sensei in senseis  %}
+    <li>{{sensei.name}}</li>
+    {% endfor %}
+
+
+</ul>
+
+{% endblock %}
