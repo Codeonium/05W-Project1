@@ -11,18 +11,18 @@ CREATE TABLE wazas (
 CREATE TABLE deshis (
     id SERIAL PRIMARY KEY,
     name VARCHAR (255),
-    waza_id INT REFERENCES wazas(id) ON DELETE CASCADE
+    waza_id INT REFERENCES wazas(id)
 );
 
 CREATE TABLE senseis (
     id SERIAL PRIMARY KEY,
     name VARCHAR (255),
-    waza_id INT REFERENCES wazas(id) ON DELETE CASCADE
+    waza_id INT REFERENCES wazas(id)
 );
 
 CREATE TABLE keikos (
     id SERIAL PRIMARY KEY,
-    sensei_id INT REFERENCES senseis(id) ON DELETE CASCADE,
+    sensei_id INT REFERENCES senseis(id),
     time TIME,
-    deshi_id INT REFERENCES deshis(id) ON DELETE CASCADE
+    deshi_id INT REFERENCES deshis(id)
 );

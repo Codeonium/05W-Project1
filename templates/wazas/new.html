@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+
+<form action="/wazas" method="post">
+
+    <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Name" required autofocus>
+    </div>
+
+    <div>
+        <label for="sensei">sensei:</label>
+        <select id="sensei" name="sensei_id">
+            {% for sensei in all_senseis %}
+            <option value="{{ sensei.id }}">{{ sensei.name }}</option>
+            {% endfor %}
+        </select>
+    </div>
+
+    <button type="submit">Add Waza</button>
+
+</form>
+
+{% endblock %}
