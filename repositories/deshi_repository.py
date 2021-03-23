@@ -29,7 +29,7 @@ def select(id):
     sql = "SELECT * FROM deshis WHERE id = %s"
     values = [id]
     result = run_sql(sql, values)[0]
-    waza = waza_repository.select(result["id"])
+    waza = waza_repository.select(result["waza_id"])
     deshi = Deshi(result["name"], waza, result["id"])
     return deshi
 

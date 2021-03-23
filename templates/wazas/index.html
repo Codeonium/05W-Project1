@@ -8,16 +8,12 @@
     <div class="waza">
         <div class="content">
             <a href="/wazas/{{waza.id}}">{{waza.name}}</a>
-            <div class="buttons">
-                <form class="delete-form" action="/wazas/{{waza.id}}/delete" method="POST">
-                    <button>delete</button>
-                </form>
-            </div>
+            <hr>
         </div>
     </div>
     </tr>
     {% endfor %}
-    <p><a href="/wazas/new">Add a new waza</a></p>
+    <p><a href="/wazas/new">Add a new Waza</a></p>
 
 </table>
 

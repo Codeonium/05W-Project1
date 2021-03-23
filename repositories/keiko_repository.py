@@ -30,8 +30,8 @@ def select(id):
     sql = "SELECT * FROM keikos WHERE id = %s"
     values = [id]
     result = run_sql(sql, values)[0]
-    deshi = deshi_repository.select(result["id"])
-    sensei = sensei_repository.select(result["id"])
+    deshi = deshi_repository.select(result["deshi_id"])
+    sensei = sensei_repository.select(result["sensei_id"])
     keiko = Keiko(sensei, result["time"], deshi, result["id"])
     return keiko
 
