@@ -3,13 +3,12 @@
 {% block content %}
 <h1> {{sensei.name}} </h1>
 
-<h3>Knows:</h3>
+<h3>Known waza:</h3>
 
-<ul>
-    {% for waza in wazas  %}
-    <li>{{waza.name}}</li>
-    {% endfor %}
-
-</ul>
+<div>
+    <hr>
+    <p>{{sensei.waza.name}}</p>
+    <p><a href="/keikos/{{sensei.id}}/edit">Edit</a></p>
+</div>
 
 {% endblock %}

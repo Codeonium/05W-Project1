@@ -3,12 +3,12 @@
 {% block content %}
 <h1> {{deshi.name}} </h1>
 
-<h3>Info:</h3>
-<ul>
-    {% for waza in wazas  %}
-    <li>{{waza.name}}</li>
-    {% endfor %}
+<h3>Known waza:</h3>
 
-</ul>
+<div>
+    <hr>
+    <p>{{deshi.waza.name}}</p>
+    <p><a href="/keikos/{{deshi.id}}/edit">Edit</a></p>
+</div>
 
 {% endblock %}

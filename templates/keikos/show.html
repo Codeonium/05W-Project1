@@ -3,6 +3,11 @@
 {% block content %}
 <h1> Keiko at {{ keiko.time}} </h1>
 
-<h3>Info:</h3>
-
+<div>
+    <p>Sensei: {{keiko.sensei.name}}</p>
+    <hr>
+    <p>Time: {{keiko.time}}</p>
+    <p>Deshi: {{keiko.deshi.name}}</p>
+    <p><a href="/keikos/{{keiko.id}}/edit">Edit</a></p>
+</div>
 {% endblock %}
