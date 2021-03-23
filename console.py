@@ -41,7 +41,7 @@ deshi_repository.save(deshi_1)
 deshi_2 = Deshi("Picollo", waza_3)
 deshi_repository.save(deshi_2)
 
-keiko_1 = Keiko(sensei_1, "19:30:00")
+keiko_1 = Keiko(sensei_1, "19:30:00", deshi_2)
 keiko_repository.save(keiko_1)
 
 keiko_2 = Keiko(sensei_2, "10:00:00", deshi_1)

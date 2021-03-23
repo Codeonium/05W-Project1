@@ -24,6 +24,5 @@ CREATE TABLE keikos (
     id SERIAL PRIMARY KEY,
     sensei_id INT REFERENCES senseis(id) ON DELETE CASCADE,
     time TIME,
-    deshi_id INT REFERENCES deshis(id) ON DELETE CASCADE,
-    waza_id INT REFERENCES wazas(id) ON DELETE CASCADE
+    deshi_id INT REFERENCES deshis(id) ON DELETE CASCADE
 );

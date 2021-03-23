@@ -7,8 +7,8 @@ import repositories.waza_repository as waza_repository
 
 
 def save(deshi):
-    sql = "INSERT INTO deshis (name) VALUES (%s) RETURNING id"
-    values = [deshi.name]
+    sql = "INSERT INTO deshis (name, waza_id) VALUES (%s, %s) RETURNING id"
+    values = [deshi.name, deshi.waza.id]
     results = run_sql(sql, values)
     id = results[0]['id']
     deshi.id = id
