@@ -19,7 +19,7 @@ def select_all():
     sql = "SELECT * FROM deshis"
     results = run_sql(sql)
     for row in results:
-        waza = waza_repository.select(row["id"])
+        waza = waza_repository.select(row["waza_id"])
         deshi = Deshi(row["name"], waza, row["id"])
         deshis.append(deshi)
     return deshis
