@@ -3,15 +3,23 @@
 <h1>Keiko</h1>
 
 <table>
+    {% for keiko in all_keikos %}
     <tr>
-        <th>Time</th>
-
-    </tr>
-    {% for keiko in keikos %}
-    <tr>
-        <td><a href="/keikos/{{ keiko.id }}"> {{keiko.time}}</a></td>
+    <div class="keiko">
+        <div class="content">
+            <a href="/keikos/{{keiko.id}}">{{keiko.time}}</a>
+            <br>
+            <a href="/keikos/{{keiko.id}}"><em>{{keiko.sensei.name}}</em></a>
+            <div class="buttons">
+                <form class="delete-form" action="/keikos/{{keiko.id}}/delete" method="POST">
+                    <button>delete</button>
+                </form>
+            </div>
+        </div>
+    </div>
     </tr>
     {% endfor %}
+
 </table>
 
 {% endblock %}

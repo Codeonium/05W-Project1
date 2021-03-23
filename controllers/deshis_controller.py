@@ -9,7 +9,7 @@ deshis_blueprint = Blueprint("deshis", __name__)
 @deshis_blueprint.route("/deshis")
 def deshis():
     deshis = deshi_repository.select_all()
-    return render_template("deshis/index.html", title = "Deshi", deshis = deshis)
+    return render_template("deshis/index.html", title = "Deshi", all_deshis = deshis)
 
 
 @deshis_blueprint.route("/deshis/new", methods=['GET'])

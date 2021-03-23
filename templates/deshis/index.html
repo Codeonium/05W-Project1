@@ -3,15 +3,23 @@
 <h1>Deshi</h1>
 
 <table>
+    {% for deshi in all_deshis %}
     <tr>
-        <th>Name</th>
-
-    </tr>
-    {% for deshi in deshis %}
-    <tr>
-        <td><a href="/deshis/{{ deshi.id }}"> {{deshi.name}} </a></td>
+    <div class="deshi">
+        <div class="content">
+            <a href="/deshis/{{deshi.id}}">{{deshi.name}}</a>
+            <br>
+            <a href="/deshi/{{deshi.id}}">{{deshi.waza.name}}</a>            
+            <div class="buttons">
+                <form class="delete-form" action="/deshis/{{deshi.id}}/delete" method="POST">
+                    <button>delete</button>
+                </form>
+            </div>
+        </div>
+    </div>
     </tr>
     {% endfor %}
+
 </table>
 
 {% endblock %}

@@ -12,7 +12,7 @@ keikos_blueprint = Blueprint("keikos", __name__)
 @keikos_blueprint.route("/keikos")
 def keikos():
     keikos = keiko_repository.select_all()
-    return render_template("keikos/index.html", title = "Keiko", keikos = keikos)
+    return render_template("keikos/index.html", title = "Keiko", all_keikos = keikos)
 
 @keikos_blueprint.route("/keikos/new", methods=['GET'])
 def new_keiko():

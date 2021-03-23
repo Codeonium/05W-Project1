@@ -11,7 +11,7 @@ wazas_blueprint = Blueprint("wazas", __name__)
 @wazas_blueprint.route("/wazas")
 def wazas():
     wazas = waza_repository.select_all()
-    return render_template("wazas/index.html", title = "Waza", wazas = wazas)
+    return render_template("wazas/index.html", title = "Waza", all_wazas = wazas)
 
 @wazas_blueprint.route("/wazas/<id>")
 def show(id):

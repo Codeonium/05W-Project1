@@ -3,15 +3,23 @@
 <h1>Sensei</h1>
 
 <table>
+    {% for sensei in all_senseis %}
     <tr>
-        <th>Name</th>
-
-    </tr>
-    {% for sensei in senseis %}
-    <tr>
-        <td><a href="/senseis/{{ sensei.id }}"> {{sensei.name}} </a></td>
+    <div class="sensei">
+        <div class="content">
+            <a href="/senseis/{{sensei.id}}">{{sensei.name}}</a>
+            <br>
+            <a href="/senseis/{{sensei.id}}">{{sensei.waza.name}}</a>            
+            <div class="buttons">
+                <form class="delete-form" action="/senseis/{{sensei.id}}/delete" method="POST">
+                    <button>delete</button>
+                </form>
+            </div>
+        </div>
+    </div>
     </tr>
     {% endfor %}
+
 </table>
 
 {% endblock %}

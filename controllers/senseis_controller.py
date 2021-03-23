@@ -9,7 +9,7 @@ senseis_blueprint = Blueprint("senseis", __name__)
 @senseis_blueprint.route("/senseis")
 def senseis():
     senseis = sensei_repository.select_all()
-    return render_template("senseis/index.html", title = "Sensei", senseis = senseis)
+    return render_template("senseis/index.html", title = "Sensei", all_senseis = senseis)
 
 
 @senseis_blueprint.route("/senseis/new", methods=['GET'])
