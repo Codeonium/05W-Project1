@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, redirect
 from flask import Blueprint
 from models.waza import Waza
+
 import repositories.waza_repository as waza_repository
 import repositories.deshi_repository as deshi_repository
 import repositories.sensei_repository as sensei_repository
@@ -13,12 +14,12 @@ def wazas():
     wazas = waza_repository.select_all()
     return render_template("wazas/index.html", title = "Waza", all_wazas = wazas)
 
-@wazas_blueprint.route("/wazas/<id>")
-def show(id):
+@wazas_blueprint.route("/wazas/<id>", methods = ['GET'])
+def show_waza(id):
     waza = waza_repository.select(id)
-    senseis = waza_repository.senseis(waza)
-    deshis = waza_repository.deshis(waza)
-    return render_template("wazas/show.html", waza = waza, senseis = senseis, deshis = deshis)
+    sensei = waza_repository.senseis(waza)
+    deshi = waza_repository.deshis(waza)
+    return render_template("wazas/show.html", waza = waza, sensei = sensei, deshi = deshi)
 
 @wazas_blueprint.route("/wazas/new", methods=['GET'])
 def new_waza():

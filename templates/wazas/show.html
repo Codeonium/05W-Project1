@@ -1,20 +1,17 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1> {{waza.name}} </h1>
 
-<h3>Knows:</h3>
-
-<ul>
-    {% for deshi in deshis  %}
-    <li>{{deshi.name}}</li>
-    {% endfor %}
-    
-    {% for sensei in senseis  %}
-    <li>{{sensei.name}}</li>
-    {% endfor %}
-
-
-</ul>
+<div>
+    <hr>
+    <p>{{waza.name}}</p>
+    <hr>
+    <div class="buttons">
+        <form class="delete-form" action="/wazas/{{waza.id}}/delete" method="POST">
+            <button>delete</button>
+        </form>
+        <p><a href="/wazas/{{waza.id}}/edit">Edit</a></p>
+    </div>
+</div>
 
 {% endblock %}
