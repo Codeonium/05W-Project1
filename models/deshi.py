@@ -1,7 +1,6 @@
 class Deshi:
 
-    def __init__(self, name, level = None, waza = None, id = None ):
+    def __init__(self, name, waza = None, id = None ):
         self.name = name
-        self.level = level
         self.waza = waza
         self.id = id

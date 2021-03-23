@@ -73,6 +73,6 @@ def deshis(waza):
     results = run_sql(sql, values)
 
     for row in results:
-        deshi = Deshi(row['name'], row['level'], row['waza_id'], row['id'] )
+        deshi = Deshi(row['name'], row['waza_id'], row['id'] )
         deshis.append(deshi)
     return deshis

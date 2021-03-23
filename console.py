@@ -29,28 +29,23 @@ waza_repository.save(waza_3)
 waza_4 = Waza("Kubi Nage")
 waza_repository.save(waza_4)
 
-sensei_1 = Sensei("Musashi")
+sensei_1 = Sensei("Musashi", waza_1)
 sensei_repository.save(sensei_1)
 
-sensei_2 = Sensei("Nobunaga")
+sensei_2 = Sensei("Nobunaga", waza_4)
 sensei_repository.save(sensei_2)
 
-deshi_1 = Deshi("Bulma")
+deshi_1 = Deshi("Bulma", waza_2)
 deshi_repository.save(deshi_1)
 
-deshi_2 = Deshi("Picollo")
+deshi_2 = Deshi("Picollo", waza_3)
 deshi_repository.save(deshi_2)
 
 keiko_1 = Keiko(sensei_1, "19:30:00")
 keiko_repository.save(keiko_1)
 
-keiko_2 = Keiko(sensei_2, "10:00:00")
+keiko_2 = Keiko(sensei_2, "10:00:00", deshi_1)
 keiko_repository.save(keiko_2)
-
-
-
-
-
 
 
 pdb.set_trace()

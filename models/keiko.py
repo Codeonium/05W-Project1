@@ -1,8 +1,8 @@
 class Keiko:
 
-    def __init__(self, sensei, time, space = 10, deshi = None, id = None):
+    def __init__(self, sensei, time, deshi = None, waza = None,id = None):
         self.sensei = sensei
         self.time = time
-        self.space = space
         self.deshi = deshi
+        self.waza = waza
         self.id = id

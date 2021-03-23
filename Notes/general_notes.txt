@@ -45,3 +45,7 @@ A local dojo has asked you to build a piece of software to help them to manage m
 - Keikos could have a maximum capacity, and deshis can only be added while there is space remaining.
 - The dojo could be able to give its members Premium or Standard membership. Standard deshis can only be signed up for keikos during off-peak hours.
 - The Dojo could mark deshis and keikos as active/deactivated. Deactivated deshis/keikos will not appear when creating bookings. 
+
+
+
+Remove level and space to simplify the db. if then, after all is working , may look at them.

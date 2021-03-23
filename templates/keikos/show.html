@@ -1,19 +1,8 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1> {{keiko.name}} </h1>
+<h1> Keiko at {{ keiko.time}} </h1>
 
 <h3>Info:</h3>
-{{keiko.time}}
-{{keiko.sensei}}
-{{keiko.space}}
-{{keiko.deshi}}
-
-<ul>
-    {% for waza in wazas  %}
-    <li>{{waza.name}}</li>
-    {% endfor %}
-
-</ul>
 
 {% endblock %}

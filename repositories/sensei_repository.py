@@ -53,12 +53,14 @@ def update(sensei):
     run_sql(sql, values)
 
 
-def select_waza_learned(id):
+def wazas(sensei):
     wazas = []
-    sql = "SELECT wazas.* FROM wazas INNER JOIN keikos ON keikos.waza_id = wazas.id WHERE keikos.waza_id = %s"
-    values = [id]
+
+    sql = "SELECT wazas.* FROM wazas INNER JOIN keikos ON keikos.sensei_id = sensei.id WHERE sensei_id = %s"
+    values = [sensei.id]
     results = run_sql(sql, values)
-    for result in results:
-        waza = Waza(result["name"])
+
+    for row in results:
+        waza = Waza(row['name'], row['id'] )
         wazas.append(waza)
     return wazas

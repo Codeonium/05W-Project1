@@ -21,7 +21,7 @@ def select_all():
     for result in results:
         deshi = deshi_repository.select(result["id"])
         sensei = sensei_repository.select(result["id"])
-        keiko = Keiko(sensei, result["time"], result["space"], deshi, result["id"])
+        keiko = Keiko(sensei, result["time"], deshi, result["id"])
         keikos.append(keiko)
     return keikos
 
@@ -30,9 +30,9 @@ def select(id):
     sql = "SELECT * FROM keikos WHERE id = %s"
     values = [id]
     result = run_sql(sql, values)[0]
-    deshi = deshi_repository.select(result["deshi_id"])
-    sensei = sensei_repository.select(result["sensei_id"])
-    keiko = Keiko(sensei, result["time"], result["space"], deshi, result["id"])
+    deshi = deshi_repository.select(result["id"])
+    sensei = sensei_repository.select(result["id"])
+    keiko = Keiko(sensei, result["time"], deshi, result["id"])
     return keiko
 
 
@@ -48,6 +48,7 @@ def delete(id):
 
 
 def update(keiko):
-    sql = "UPDATE keikos SET (sensei_id, time, space, deshi_id) = (%s, %s, %s, %s) WHERE id = %s"
-    values = [keiko.sensei.id, keiko.time, keiko.space, keiko.deshi.id, keiko.id]
+    sql = "UPDATE keikos SET (sensei_id, time, deshi_id) = (%s, %s, %s) WHERE id = %s"
+    values = [keiko.sensei.id, keiko.time, keiko.deshi.id, keiko.id]
     run_sql(sql, values)
+

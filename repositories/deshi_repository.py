@@ -20,7 +20,7 @@ def select_all():
     results = run_sql(sql)
     for row in results:
         waza = waza_repository.select(row["id"])
-        deshi = Deshi(row["name"], row["level"], waza, row["id"])
+        deshi = Deshi(row["name"], waza, row["id"])
         deshis.append(deshi)
     return deshis
 
@@ -30,7 +30,7 @@ def select(id):
     values = [id]
     result = run_sql(sql, values)[0]
     waza = waza_repository.select(result["id"])
-    deshi = Deshi(result["name"], result["level"], waza, result["id"])
+    deshi = Deshi(result["name"], waza, result["id"])
     return deshi
 
 
@@ -46,17 +46,19 @@ def delete(id):
 
 
 def update(deshi):
-    sql = "UPDATE deshis SET (name, level, waza_id) = (%s, %s, %s) WHERE id = %s"
-    values = [deshi.name, deshi.level, deshi.waza.id, deshi.id]
+    sql = "UPDATE deshis SET (name, waza_id) = (%s, %s) WHERE id = %s"
+    values = [deshi.name, deshi.waza.id, deshi.id]
     run_sql(sql, values)
 
 
-def select_waza_learned(id):
+def wazas(deshi):
     wazas = []
-    sql = "SELECT wazas.* FROM wazas INNER JOIN keikos ON keikos.waza_id = wazas.id WHERE keikos.waza_id = %s"
-    values = [id]
+
+    sql = "SELECT wazas.* FROM wazas INNER JOIN keikos ON keikos.deshi_id = deshi.id WHERE deshi_id = %s"
+    values = [deshi.id]
     results = run_sql(sql, values)
+
     for row in results:
-        waza = Waza(row["name"])
+        waza = Waza(row['name'], row['id'] )
         wazas.append(waza)
     return wazas
