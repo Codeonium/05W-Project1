@@ -56,7 +56,7 @@ def update(waza):
 def senseis(waza):
     senseis = []
 
-    sql = "SELECT senseis.* FROM senseis INNER JOIN keikos ON keikos.waza_id = waza.id WHERE waza_id = %s"
+    sql = "SELECT * FROM senseis WHERE waza_id = %s"
     values = [waza.id]
     results = run_sql(sql, values)
 
@@ -68,7 +68,7 @@ def senseis(waza):
 def deshis(waza):
     deshis = []
 
-    sql = "SELECT deshis.* FROM deshis INNER JOIN keikos ON keikos.waza_id = waza.id WHERE waza_id = %s"
+    sql = "SELECT * FROM deshis WHERE waza_id =%s"
     values = [waza.id]
     results = run_sql(sql, values)
 
