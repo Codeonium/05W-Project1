@@ -34,21 +34,6 @@ def create_waza():
     waza_repository.save(waza)
     return redirect('/wazas')
 
-@wazas_blueprint.route("/wazas/<id>/edit", methods=['GET'])
-def edit_waza(id):
-    waza = waza_repository.select(id)
-    deshis = deshi_repository.select_all()
-    senseis = sensei_repository.select_all()
-    return render_template('senseis/edit.html', all_deshis = deshis, all_senseis = senseis, waza = waza)
-
-@wazas_blueprint.route("/wazas/<id>", methods=['POST'])
-def update_waza(id):
-    name    = request.form['name']
-    waza  = waza_repository.select(request.form['waza_id'])
-    waza = Waza(name, id)
-    waza_repository.update(waza)
-    return redirect('/wazas')
-
 @wazas_blueprint.route("/wazas/<id>/delete", methods=['POST'])
 def delete_waza(id):
     waza_repository.delete(id)

@@ -11,13 +11,13 @@ CREATE TABLE wazas (
 CREATE TABLE deshis (
     id SERIAL PRIMARY KEY,
     name VARCHAR (255),
-    waza_id INT REFERENCES wazas(id)
+    waza_id INT REFERENCES wazas(id) ON DELETE CASCADE
 );
 
 CREATE TABLE senseis (
     id SERIAL PRIMARY KEY,
     name VARCHAR (255),
-    waza_id INT REFERENCES wazas(id)
+    waza_id INT REFERENCES wazas(id) ON DELETE CASCADE
 );
 
 CREATE TABLE keikos (

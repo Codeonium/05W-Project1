@@ -1,0 +1,21 @@
+body {
+    background-color: black;
+    color: bisque;
+    text-align: center;
+    padding: 2px;
+    border: 2px;
+    display: block;
+}
+
+input, select, button {
+    font-size: 100%;
+    width : 100%;
+    padding: 10px;
+    margin: 10px;
+    box-sizing: border-box;
+}
+
+.delete-form{
+    display: inline;
+    padding: 20px;
+}
