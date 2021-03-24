@@ -1,32 +1,4 @@
-create models and repositories
-On  console.py remember to import models and repositories
-Save and delete on console.py
-
-
-Templates - Base and index
-
 Static for CSS - leave for last
-
-Repositories - 
-
-Models - Good place to start
-
-DB - run_sql and sql files to be created.
-
-Controllers - 
-
-
-Start by creating the folders and the files that will not change.
-
-
-On Base.html still needs the work done once all parts are decided, check navigation
-
-DB to take table names after models are created
-
-models created but i think i will revisit them before the end (for now they will work as guidance, but will likely remove/change them)
-
-need a function for the limit of space in keiko
-
 
 ### Dojo
 
@@ -38,14 +10,4 @@ A local dojo has asked you to build a piece of software to help them to manage m
 - The app should allow the dojo to create and edit keikos
 - The app should allow the dojo to book deshis on specific keikos
 - The app should show a list of all upcoming keikos
-- The app should show all deshis that are booked in for a particular keiko
-
-#### Possible Extensions
-
-- Keikos could have a maximum capacity, and deshis can only be added while there is space remaining.
-- The dojo could be able to give its members Premium or Standard membership. Standard deshis can only be signed up for keikos during off-peak hours.
-- The Dojo could mark deshis and keikos as active/deactivated. Deactivated deshis/keikos will not appear when creating bookings. 
-
-
-
-Remove level and space to simplify the db. if then, after all is working , may look at them.
+------ The app should show all deshis that are booked in for a particular keiko
