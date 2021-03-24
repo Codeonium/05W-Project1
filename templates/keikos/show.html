@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1> Keiko at {{ keiko.time}} </h1>
+<h1> Keiko </h1>
 
 <div>
     <p>Sensei: {{keiko.sensei.name}}</p>
@@ -17,4 +17,6 @@
         </form>
     </div>
 </div>
+<a href="/keikos"><button>Back</button></a>
+
 {% endblock %}

@@ -4,22 +4,24 @@
 <form action="/senseis" method="post">
 
     <div>
-        <label for="name">Name:</label>
+        <label for="name">Name:</label><br>
         <input type="text" id="name" name="name" placeholder="Name" required autofocus>
     
     </div>
     <div>
-        <label for="waza">Teaching Waza:</label>
-        <select id="waza" name="waza_id">
+        <label for="waza">Teaching Waza:</label><br>
+        <select id="waza" name="waza_id" required>
             {% for waza in all_wazas %}
             <option value="{{ waza.id }}">{{ waza.name }}</option>
             {% endfor %}
         </select>
     </div>
 
+    <h5>If your Waza is not appering, confirm that it has been added in the <a href="/wazas"><em>Waza</em></a> page</h5>
 
     <button type="submit">Add Waza</button>
 
 </form>
+<a href="/senseis"><button>Back</button></a>
 
 {% endblock %}

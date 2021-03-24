@@ -2,20 +2,94 @@ body {
     background-color: black;
     color: bisque;
     text-align: center;
+    font-size: x-large;
     padding: 2px;
     border: 2px;
     display: block;
 }
 
+nav li{
+    display: inline-flex;
+    background-color: red;
+    border: 20px solid white;
+    border-radius: 50%;
+    margin: 15px;
+    padding: 15px;
+}
+
 input, select, button {
-    font-size: 100%;
-    width : 100%;
+    background-color: greenyellow;
+    border: 10px solid white;
+    border-radius: 40%;
+    color: deeppink;
+    font-size: 50%;
+    font-weight: bolder;
+    width : 30%;
     padding: 10px;
     margin: 10px;
     box-sizing: border-box;
+    text-transform: capitalize;
 }
 
-.delete-form{
-    display: inline;
-    padding: 20px;
+nav li{
+    display: inline-flex;
+    background-color: red;
+    border: 20px solid white;
+    border-radius: 50%;
+    margin: 15px;
+    padding: 15px;
 }
+.howtouse {
+    background-color: rgb(209, 74, 191);
+    border: 10px solid white;
+    border-radius: 30%;
+    margin: 15px;
+    padding: 30px;
+}
+.howtouse li{
+    display: inline-block;
+    color:greenyellow;
+    background-color: blue;
+    border: 10px solid white;
+    border-radius: 20%;
+    margin: 15px;
+    padding: 30px;
+    text-shadow: 2px 2px black;
+}
+a:link, a:visited{
+    color: goldenrod;
+    text-shadow: 1.5px 1px red;
+    background-color: transparent;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+a:hover, a:active, a:focus {
+    border: 20px;
+    color: rgb(0, 255, 255) ;
+    box-shadow: 20px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+button:hover {
+    background-color: blanchedalmond;
+    border-top:10px solid royalblue;
+    border-bottom:10px solid red;
+    border-left: 10px solid black;
+    border-right: 10px solid black;
+    color: blue;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.content {
+    display: inline-block;
+    background-image: url('/static/images/aikido.jpeg');
+    width: 100%;
+    padding: 2.8em 0em;
+    border: 2px solid rgb(209, 74, 191) ;
+}
+
+
+

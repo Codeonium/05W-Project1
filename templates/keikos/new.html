@@ -3,8 +3,8 @@
 
 <form action="/keikos" method="post">
     <div>
-        <label for="sensei">sensei:</label>
-        <select id="sensei" name="sensei_id">
+        <label for="sensei">Sensei:</label><br>
+        <select id="sensei" name="sensei_id" required>
             {% for sensei in all_senseis %}
             <option value="{{ sensei.id }}">{{ sensei.name }}</option>
             {% endfor %}
@@ -12,21 +12,22 @@
     </div>
 
     <div>
-        <label for="time">Time:</label>
+        <label for="time">Time:</label><br>
         <input type="time" id="time" name="time" placeholder="Time" required autofocus>
     </div>
 
     <div>
-        <label for="deshi">Deshi:</label>
-        <select id="deshi" name="deshi_id">
+        <label for="deshi">Deshi:</label><br>
+        <select id="deshi" name="deshi_id" required>
             {% for deshi in all_deshis %}
             <option value="{{ deshi.id }}">{{ deshi.name }}</option>
             {% endfor %}
         </select>
     </div>
-
+    <br>
     <button type="submit">Add Keiko</button>
 
 </form>
+<a href="/keikos"><button>Back</button></a>
 
 {% endblock %}
