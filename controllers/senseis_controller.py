@@ -47,7 +47,6 @@ def update_sensei(id):
     name    = request.form['name']
     waza  = waza_repository.select(request.form['waza_id'])
     sensei = Sensei(name, waza, id)
-    print(sensei.waza.name())
     sensei_repository.update(sensei)
     return redirect('/senseis')
 

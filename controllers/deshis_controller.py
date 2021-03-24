@@ -47,7 +47,6 @@ def update_deshi(id):
     name    = request.form['name']
     waza  = waza_repository.select(request.form['waza_id'])
     deshi = Deshi(name, waza, id)
-    print(deshi.waza.name())
     deshi_repository.update(deshi)
     return redirect('/deshis')
 

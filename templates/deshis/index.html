@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
 <h1>Deshi</h1>
-
+<hr>
 <table>
     {% for deshi in all_deshis %}
     <tr>
@@ -9,12 +9,8 @@
         <div class="content">
             <a href="/deshis/{{deshi.id}}">{{deshi.name}}</a>
             <br>
-            <a href="/deshis/{{deshi.id}}">{{deshi.waza.name}}</a>            
-            <div class="buttons">
-                <form class="delete-form" action="/deshis/{{deshi.id}}/delete" method="POST">
-                    <button>delete</button>
-                </form>
-            </div>
+            <a href="/deshis/{{deshi.id}}">{{deshi.waza.name}}</a>   
+            <hr>         
         </div>
     </div>
     </tr>

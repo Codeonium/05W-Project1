@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
 <h1>Keiko</h1>
-
+<hr>
 <table>
     {% for keiko in all_keikos %}
     <tr>
@@ -10,11 +10,7 @@
             <a href="/keikos/{{keiko.id}}">{{keiko.time}}</a>
             <br>
             <a href="/keikos/{{keiko.id}}"><em>{{keiko.sensei.name}}</em></a>
-            <div class="buttons">
-                <form class="delete-form" action="/keikos/{{keiko.id}}/delete" method="POST">
-                    <button>delete</button>
-                </form>
-            </div>
+            <hr>
         </div>
     </div>
     </tr>

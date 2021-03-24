@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+
+<form action="/senseis/{{sensei.id}}" method="post">
+    <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" value="{{sensei.name}}" required>
+    </div>
+
+    <div>
+        <label for="waza">Waza:</label>
+        <select id="waza" name="waza_id">
+            {% for waza in all_wazas %}
+            <option value="{{ waza.id }}" {% if sensei.waza.id==waza.id %} selected="selected" {% endif %}>
+                {{ waza.name }}
+            </option>
+            {% endfor %}
+        </select>
+    </div>
+
+    <button type="submit">Update Waza</button>
+
+</form>
+
+{% endblock %}

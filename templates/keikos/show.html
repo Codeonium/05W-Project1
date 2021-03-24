@@ -11,5 +11,10 @@
     <p>Deshi: {{keiko.deshi.name}}</p>
     <p>Waza wanting to learn: {{keiko.deshi.waza.name}}</p>
     <p><a href="/keikos/{{keiko.id}}/edit">Edit</a></p>
+    <div class="buttons">
+        <form class="delete-form" action="/keikos/{{keiko.id}}/delete" method="POST">
+            <button>delete</button>
+        </form>
+    </div>
 </div>
 {% endblock %}

@@ -8,7 +8,12 @@
 <div>
     <hr>
     <p>{{deshi.waza.name}}</p>
-    <p><a href="/keikos/{{deshi.id}}/edit">Edit</a></p>
+    <p><a href="/deshis/{{deshi.id}}/edit">Edit</a></p>
+    <div class="buttons">
+        <form class="delete-form" action="/deshis/{{deshi.id}}/delete" method="POST">
+            <button>delete</button>
+        </form>
+    </div>
 </div>
 
 {% endblock %}

@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block content %}
+
+<form action="/keikos/{{keiko.id}}" method="post">
+    <div>
+        <label for="sensei">sensei:</label>
+        <select id="sensei" name="sensei_id">
+            {% for sensei in all_senseis %}
+            <option value="{{ sensei.id }}" {% if keiko.sensei.id==sensei.id %} selected="selected" {% endif %}>
+                {{ sensei.name }}
+            </option>
+            {% endfor %}
+        </select>
+    </div>
+
+    <div>
+        <label for="time">Time:</label>
+        <input type="time" id="time" name="time" placeholder="Time" required autofocus>
+    </div>
+
+    <div>
+        <label for="deshi">Deshi:</label>
+        <select id="deshi" name="deshi_id">
+            {% for deshi in all_deshis %}
+            <option value="{{ deshi.id }}" {% if keiko.deshi.id==deshi.id %} selected="selected" {% endif %}>
+                {{ deshi.name }}
+            </option>
+            {% endfor %}
+        </select>
+    </div>
+
+    <button type="submit">Update Keiko</button>
+</form>
+
+{% endblock %}

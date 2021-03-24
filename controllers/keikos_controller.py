@@ -47,7 +47,6 @@ def update_keiko(id):
     time    = request.form['time']
     deshi = deshi_repository.select(request.form['deshi_id'])
     keiko = Keiko(sensei, time, deshi, id)
-    print(keiko.sensei.name())
     keiko_repository.update(keiko)
     return redirect('/keikos')
 
