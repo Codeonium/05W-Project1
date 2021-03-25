@@ -10,4 +10,4 @@ A local dojo has asked you to build a piece of software to help them to manage m
 - The app should allow the dojo to create and edit keikos
 - The app should allow the dojo to book deshis on specific keikos
 - The app should show a list of all upcoming keikos
------- The app should show all deshis that are booked in for a particular keiko
+- The app should show all deshis that are booked in for a particular keiko
